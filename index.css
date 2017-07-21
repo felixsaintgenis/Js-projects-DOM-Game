@@ -1,0 +1,33 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 1200px;
+}
+.player-one-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  width: 400px;
+  height: 600px;
+  text-align: center;
+}
+.player-two-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  width: 400px;
+  height: 600px;
+  text-align: center;
+}
+.game-settings {
+  display: flex;
+  flex-direction: column;
+  background-color: #E4E8E6;
+  width: 400px;
+  height: 600px;
+  text-align: center;
+}
+#main-score-player-one, #main-score-player-two {
+  font-size: 70px;
+}
