@@ -36,6 +36,7 @@ function rollingDice () {
     if (diceRoll !== 1) {
       roundScorePlayerOne += diceRoll;
       roundScorePlayerOneHTML.innerHTML = roundScorePlayerOne
+      gameWin ()
 
     } else {
       roundScorePlayerOne = 0
@@ -46,6 +47,7 @@ function rollingDice () {
     if (diceRoll !== 1) {
       roundScorePlayerTwo += diceRoll;
       roundScorePlayerTwoHTML.innerHTML = roundScorePlayerTwo
+      gameWin ()
 
     } else {
       roundScorePlayerTwo = 0
@@ -70,6 +72,16 @@ function hold () {
     roundScorePlayerTwo = 0
     roundScorePlayerTwoHTML.innerHTML = 0
     switchPlayer = true;
+    gameWin ()
   }
 
+}
+
+function gameWin () {
+  if (totalScorePlayerOne >= 100) {
+    alert("Player one win the game")
+  }
+  if (totalScorePlayerTwo >=100) {
+    alert("Player two win the game")
+  }
 }
