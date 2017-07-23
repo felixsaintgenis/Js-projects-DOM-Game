@@ -38,6 +38,7 @@ function rollingDice () {
 
   diceRoll = Math.round(Math.random()*5 + 1);
   changeImage ()
+  ChosenPlayer ()
   if (switchPlayer == true) {
 
     if (diceRoll !== 1) {
@@ -114,3 +115,13 @@ function gameWin () {
          diceImg.src="images/dice-6.png";
       }
  }
+function ChosenPlayer () {
+  if (switchPlayer == true) {
+    playerOneTurn.style.color = 'red';
+    playerTwoTurn.style.color = 'black';
+  }
+  else if (switchPlayer == false) {
+    playerTwoTurn.style.color = "red";
+    playerOneTurn.style.color = "black";
+  }
+}
