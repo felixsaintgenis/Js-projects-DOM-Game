@@ -11,28 +11,28 @@
 <div class="main-container">
 
 
-<div class="player-one-container">
+<div class="player-one-container" id="playerOneTurn">
 <h1>PLAYER 1</h1>
-<h3 id="main-score-player-one">43</h3>
+<h3 id="main-score-player-one">???</h3>
 <div class="current-score-container">
   <p>current</p>
-<h3 id="round-score-player-one">11</h3>
+<h3 id="round-score-player-one">?</h3>
 </div>
 </div>
 <div class="game-settings">
   <button type="button" name="button" onclick="newGame()">NEW GAME</button>
-  <img src="images/dice-1.png" alt="dice">
+  <img src="images/dice-1.png" alt="dice" id="diceImage">
   <button type="button" name="button" onclick="rollingDice()">ROLL DICE</button>
   <button type="button" name="button" id="holdButton" onclick="hold()">HOLD</button>
 </div>
 
 
-<div class="player-two-container">
+<div class="player-two-container" id="playerTwoTurn">
   <h1>PLAYER 2</h1>
-  <h3 id="main-score-player-two">23</h3>
+  <h3 id="main-score-player-two">???</h3>
   <div class="current-score-container">
     <p>current</p>
-  <h3 id="round-score-player-two">0</h3>
+  <h3 id="round-score-player-two">?</h3>
   </div>
 </div>
 </div>

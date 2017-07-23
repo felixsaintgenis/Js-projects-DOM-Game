@@ -9,9 +9,16 @@ const totalScorePlayerTwoHTML= document.getElementById('main-score-player-two');
 const roundScorePlayerOneHTML = document.getElementById('round-score-player-one');
 const roundScorePlayerTwoHTML = document.getElementById('round-score-player-two');
 
+const playerOneTurn = document.getElementById('playerOneTurn')
+const playerTwoTurn = document.getElementById('playerTwoTurn')
+
 const holdButton = document.getElementById('holdButton')
 
+const diceImg = document.getElementById('diceImage')
+
 let diceRoll = 0;
+
+
 
 function newGame () {
   totalScorePlayerOneHTML.innerHTML = "0";
@@ -29,8 +36,8 @@ function newGame () {
 
 function rollingDice () {
 
-  diceRoll = Math.round(Math.random()*6 + 1);
-
+  diceRoll = Math.round(Math.random()*5 + 1);
+  changeImage ()
   if (switchPlayer == true) {
 
     if (diceRoll !== 1) {
@@ -66,6 +73,7 @@ function hold () {
     roundScorePlayerOne = 0
     roundScorePlayerOneHTML.innerHTML = 0
     switchPlayer = false;
+    gameWin ()
   } else {
     totalScorePlayerTwo += roundScorePlayerTwo
     totalScorePlayerTwoHTML.innerHTML = totalScorePlayerTwo
@@ -85,3 +93,24 @@ function gameWin () {
     alert("Player two win the game")
   }
 }
+
+ function changeImage () {
+      if (diceRoll == 1) {
+         diceImg.src="images/dice-1.png";
+      }
+      else if (diceRoll == 2) {
+         diceImg.src="images/dice-2.png";
+      }
+      else if (diceRoll == 3) {
+         diceImg.src="images/dice-3.png";
+      }
+      else if (diceRoll == 4) {
+         diceImg.src="images/dice-4.png";
+      }
+      else if (diceRoll == 5) {
+         diceImg.src="images/dice-5.png";
+      }
+      else if (diceRoll == 6) {
+         diceImg.src="images/dice-6.png";
+      }
+ }
